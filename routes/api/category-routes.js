@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
       include: [Product],
     });
 
-    id (!categoryData) {
+    if (!categoryData) {
       res.status(404).json({ message: "No category found with this id!"});
       return;
     }
